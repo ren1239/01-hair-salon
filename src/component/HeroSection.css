@@ -1,0 +1,24 @@
+.logo-container {
+    position: relative;
+  }
+  
+  .logo-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -1100px; /* Moves the pseudo-element 100px to the right outside the container */
+    background-color: black;
+    width: 1120px;
+    height: 100%; /* Makes the height 100% of the container's height */
+    transition: transform 400ms ease; /* Controls the speed and easing of the transition for transform */
+
+  }
+  
+  .logo-container:hover::before{
+    transform: translateX(-1000px);
+  }
+
+  .logo-container:hover h1{ 
+    color:white;
+    z-index:10
+  }
